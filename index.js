@@ -16,6 +16,10 @@ cloudinary.v2.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome To 3d-Portfolio</h1>");
+});
+
 app.listen(process.env.PORT, () => {
   console.log(
     `Portfolio server is running on ${process.env.MODE} mode at http://localhost:${process.env.PORT}`
